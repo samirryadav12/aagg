@@ -70,7 +70,7 @@ export function Navbar() {
           </Link>
 
           <Link
-            href="/projects/line-follower"
+            href="/projects/line-follower/journey"
             className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-brand-500 hover:bg-brand-600 text-white text-sm font-bold shadow-md hover:shadow-lg transition-all duration-200 group"
           >
             <span>Start Building</span>
@@ -119,7 +119,7 @@ export function Navbar() {
           })}
           <div className="pt-3">
             <Link
-              href="/projects/line-follower"
+              href="/projects/line-follower/journey"
               onClick={() => setMobileMenuOpen(false)}
               className="w-full flex items-center justify-center gap-2 px-5 py-3 rounded-full bg-brand-500 hover:bg-brand-600 text-white font-bold shadow-md"
             >

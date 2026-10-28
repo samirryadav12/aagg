@@ -44,6 +44,8 @@ export interface Project {
   realImage?: string;
   wiringImage?: string;
   featured?: boolean;
+  status?: "published" | "draft"; // drafts are hidden from search (and anything else that checks); default published
+  keywords?: string[];            // optional extra search words: other names people use for this robot
   bom?: BomItem[];
   steps?: {
     stepNumber: number;

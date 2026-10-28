@@ -63,3 +63,50 @@ body {
 ::-webkit-scrollbar-thumb:hover {
   background: #C85A32;
 }
+
+/* Project journey: chapter titles follow the 3D world's light (dark ink in the warm studio, light ink in the
+   dark technical rooms); content sheets stay light so every chapter reads the same way */
+.journey-ink {
+  color: #181A1C;
+  text-shadow: 0 0 24px rgba(246, 241, 233, 0.85);
+  transition: color 0.45s ease, text-shadow 0.45s ease;
+}
+
+.journey[data-ink="light"] .journey-ink {
+  color: #F7F3EC;
+  text-shadow: 0 0 24px rgba(22, 27, 33, 0.85);
+}
+
+.journey[data-stage="off"] .journey-ink {
+  color: #181A1C;
+}
+
+.journey[data-stage="off"] .journey-canvas {
+  display: none;
+}
+
+.journey-sheet {
+  background: rgba(250, 247, 242, 0.96);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .journey-ink {
+    transition: none;
+  }
+}
+
+/* Line Follower workshop: detail panels and step changes rise in gently */
+@keyframes lf-rise {
+  from { opacity: 0; transform: translateY(6px); }
+  to { opacity: 1; transform: none; }
+}
+
+.lf-rise {
+  animation: lf-rise 0.38s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .lf-rise {
+    animation: none;
+  }
+}
